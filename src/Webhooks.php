@@ -31,4 +31,18 @@ class Webhooks
     {
         return $this->client->post(self::ENDPOINT, $json);
     }
+    
+    
+     /**
+     * @see https://developer.revolut.codes/docs/api-reference/business#operation/getWebhook
+     *
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function all()
+    {
+        return $this->client->get(self::ENDPOINT);
+    }
+    
+    
 }
